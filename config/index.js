@@ -12,7 +12,6 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       "/proxy":{
-        // target: 'https://cnodejs.org',
         target: 'http://www.fand.wang:8890',
         changeOrigin:true,
         pathRewrite: {

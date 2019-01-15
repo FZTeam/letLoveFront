@@ -1,6 +1,5 @@
 // 配置API接口地址
 var root = '/proxy'
-// var root = 'https://cnodejs.org/api/v1'
 // 引用axios
 var axios = require('axios')
 // 自定义判断元素类型JS
@@ -46,7 +45,7 @@ function apiAxios (method, url, params, success, failure) {
     withCredentials: false
   })
   .then(function (res) {
-    if (res.data.success === true) {
+    if (res.data.code === 200) {
       if (success) {
         success(res.data)
       }
