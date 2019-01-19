@@ -30,6 +30,9 @@ module.exports = {
     }
   },
   module: {
+    loaders: [
+      { test: /\.(less|css)?$/, loader: ["style-loader", "css-loader", "less-loader", "postcss-loader"]}
+     ],
     rules: [
       {
         test: /\.vue$/,
